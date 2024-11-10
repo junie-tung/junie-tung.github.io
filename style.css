@@ -1,75 +1,76 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f2f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #ffc1e3;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 3em;
-  color: #817df6;
-}
-
-header h2 {
-  margin: 0;
-  font-size: 1.5em;
-  color: #83afe9;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #ff69b4;
-  font-weight: bold;
-}
-
-main {
-  padding: 20px;
-}
-
-.image-gallery { display: flex; justify-content: space-around; /* 使用基本的對齊方式 */
-  flex-wrap: wrap; 
-} 
+body {               /* body版面 */
+    font-family: Arial, sans-serif;
+    background-color: #f7f2f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
   
-.image-gallery img {
-  width: 5cm;  /* 指定寬度為5公分 */
-  height: 5cm; /* 指定高度為5公分 */
-  margin: 1px;/* 手動調整間距 */ 
-}
-
-figure {
-  margin: 20px 0;
-  text-align: center;
-}
-
-figure figcaption {
-  margin-top: 10px;
-  font-style: italic;
-  color: #666;
-}
-
-footer {
-  background-color: #ffc1e3;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
+  header {             /* header版面 */
+    background-color: #ffc1e3;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {          /* h1標題設定 */
+    margin: 0;
+    font-size: 3em;
+    color: #817df6;
+    text-align: center; /* 對齊方式 */
+  }
+  
+  header h2 {          /* h2標題設定 */
+    margin: 0;
+    font-size: 1.5em;
+    color: #83afe9;
+  }
+  .main-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+  }
+      
+  nav ul {                  /* ul標記設定 */
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {              /* ul展示設定 */
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {             /* ul字型設定 */
+    text-decoration: none;
+    color: #ff69b4;
+    font-weight: bold;
+  }
+  
+  main {                   /* 內文字型 */
+    padding: 20px;
+  }
+  
+  .image-gallery { display: flex; justify-content: space-around; /* 使用基本的對齊方式 */
+    flex-wrap: wrap; 
+  } 
+    
+  .image-gallery img {
+    width: 15cm;  /* 指定寬度公分 */
+    height:15cm; /* 指定高度公分 */
+    margin: 1px; /* 手動調整間距 */ 
+  }
+  
+  figure {             /* 全文 */
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #ffc1e3;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
