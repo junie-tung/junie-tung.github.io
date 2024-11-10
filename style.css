@@ -1,4 +1,5 @@
 body {               /* body版面 */
+    overflow: auto; /* 確保滾動條可用 */
     font-family: Arial, sans-serif;
     background-color: #f7f2f9;
     color: #333;
@@ -49,10 +50,6 @@ body {               /* body版面 */
   
   main {                   /* 內文字型 */
     padding: 20px;
-  }
-  
-  .image-gallery { display: flex; justify-content: space-around; /* 使用基本的對齊方式 */
-    flex-wrap: wrap; 
   } 
     
   .image-gallery img {
@@ -70,7 +67,7 @@ body {               /* body版面 */
     background-color: #ffc1e3;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
   }
