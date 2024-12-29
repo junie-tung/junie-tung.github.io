@@ -1,0 +1,235 @@
+/* style1,css ,Flexbox 或 Grid 排版 */ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f2f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #ffc1e3;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 3em;
+    color: #817df6;
+  }
+  
+  header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #83afe9;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #ff69b4;
+    font-weight: bold;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .image-gallery { display: flex; justify-content: space-around; /* 使用基本的對齊方式 */
+    flex-wrap: wrap; 
+  } 
+    
+  .image-gallery img {
+    width: 5cm;  /* 指定寬度為5公分 */
+    height: 5cm; /* 指定高度為5公分 */
+    margin: 1px;/* 手動調整間距 */ 
+  }
+  
+  figure {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  figure figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+  }
+  
+  footer {
+    background-color: #ffc1e3;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+
+
+
+
+
+
+
+
+
+body {                     /* 基本設定 */
+    font-family: sans-serif;  /* 字體設定無襯線體 sans-serif  也可設Arial、Helvetica */
+    margin: 0;   /* 網頁內容與瀏覽器邊緣距離*/
+}
+
+.container {            /* 網站最大寬度和左右邊距 */
+    max-width: 980px;   /* 容器最大寬度 px限制 不跟著螢幕變寬 */
+    margin: 0 auto;     /* 容器左右邊距 上下邊距為 0 自動計算水平置置中*/
+    padding: 0 20px;    /* 容器內邊距 上下為 0，左右 20px */
+}
+
+header {              /* 功能列樣式 */
+    background-color: #abdcf3; /* 設定header區塊的背景顏色 */
+    padding: 30px 0;  /* 設定 header 區塊的內邊距，上下20px，左右 0 */
+}
+
+header nav ul {
+    list-style: none; /*移除導覽列 (<ul>) 項目符號 */
+    margin: 0;  /* 導覽列上下左右 外邊距 */
+    padding: 0; /* 導覽列上下左右 內邊距*/
+    text-align: left; /* 導覽列的文字靠左對齊 */
+}
+
+/* 導覽列項目 (<li>) 水平排列 */
+/* 設定導覽列項目左邊間距為 20px */
+header nav li {
+    display: inline-block; 
+    margin-left: 20px; 
+}
+
+header nav a {
+    text-decoration: none;   /* 移除導覽列連結 (<a>) 底線 */
+    color: #333;   /* 設定導覽列連結的文字顏色為深灰色 (#333) */
+}
+
+/* 下拉式選單樣式 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* 預設隱藏下拉選單內容 */
+    position: absolute;
+    background-color: #b6ccf0; /* 設定下拉選單內容的背景顏色 */
+    min-width: 160px;  /* 設定下拉選單內容的最小寬度 */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* 下拉選單內容添加陰影效果 */
+    z-index: 1; /* 設定下拉選單內容的堆疊順序 顯示在上方*/
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* 滑鼠懸停設定 顯示下拉選單內容 */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+ /* 訊息欄樣式 */
+aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  aside li {
+    margin-bottom: 10px;
+  }
+  
+  aside li a { /* 設定連結樣式 */
+    display: block; /* 將連結設定為區塊元素 */
+    padding: 10px; /* 設定內邊距 */
+    border: 1px solid #ccc; /* 加上邊框 */
+    background-color: #f9f9f9; /* 加上背景顏色 */
+    color: #333; /* 設定文字顏色 */
+    text-decoration: none; /* 移除底線 */
+    font-size: 16px;  /* 設定文字大小 */
+  }
+  
+  aside li textarea { /* 設定文字區塊樣式 */
+    display: block;
+    width: calc(100% - 22px); /* 調整寬度，扣除邊框和內邊距 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 16px;  /* 設定文字大小 */
+  }
+
+
+@keyframes marquee {
+    0% { transform: translateX(100%); } /* 起始位置在容器右側 */
+    100% { transform: translateX(-100%); } /* 移動到左側 100% */
+}
+
+.marquee p {
+    display: inline-block;
+    /*  移除 padding-left  */
+    animation: marquee 9s linear infinite;
+    color: blue; 
+}
+
+.marquee {
+    width: 70%;
+    overflow: hidden; 
+    height: 500px; /*  設定容器高度，使文字可以完整循環  */
+}
+           
+footer {        /* 版權宣告列樣式 */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    clear: both;
+}
+
+.blinking {
+    animation: blinkingText 1s infinite;
+}
+
+@keyframes blinkingText {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media (max-width: 768px) {  /* 響應式設計 螢幕尺寸調整樣式 */
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    aside {
+        float: none;
+        width: 100%;
+    }
+
+    .marquee {
+        width: 100%;
+        float: none;
+    }
+}
