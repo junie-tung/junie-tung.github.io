@@ -1,60 +1,64 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>響應式網站</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>單欄式佈局</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #b0cff7; /* 全局背景顏色 */
+            color: #333; /* 全局文本顏色 */
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff; /* 容器背景顏色 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 容器陰影 */
+        }
+
+        h1 {
+            color: #007bff; /* 標題顏色 */
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #95c1f3; /* 頁腳背景顏色 */
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>我的網站</h1>
-            <nav>
-                <ul>
-                    <li><a href="about.html"><span class="icon">&#x1F4BB;</span> 關於我</a></li>
-                    <li><a href="about.html"><span class="icon">&#x1F4D6;</span> 聯絡我</a></li>
-                    <li><a href="https://nd.nutc.edu.tw/p/403-1037-1471.php"><span class="icon">&#x1F4F1;</span> 最新消息</a></li>
-                    <li><a href="page1.html"><i class="fas fa-camera"></i> 攝影作品</a></li>
-                    <li><a href="page5.html"><i class="fas fa-camera"></i> 設計作品</a></li>
-                    <li><a href="index-text2.html"><i class="fas fa-camera"></i> 網頁版面測試</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropbtn"><span class="icon">&#x1F4F1;</span> 更多資訊</a>
-                        <div class="dropdown-content">
-                            <a href="https://im.nutc.edu.tw/p/426-1063-36.php">資管系選修</a>
-                            <a href="https://cd.nutc.edu.tw/course_01.php">商設系選修</a>
-                            <a href="page6.html">程式問題集</a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <div class="container">
-            <aside>
-                <h2>訊息欄</h2>
-                <ul>
-                    <li><a href="https://sso.nutc.edu.tw/eportal/">eportal登入</a></li>
-                    <li><a href="https://nd.nutc.edu.tw/">進修部連結</a></li>
-                    <li><a href="https://www.nutc.edu.tw/p/17-1000.php">校內網站導覽</a></li>                                
-                </ul>
-            </aside>
-
-            <article>
-                <div class="marquee">
-                    <p>~ 資訊管理系二技 董彥相 JUNIE'S weblog ~</p>
-                </div>
-            </article>
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p class="blinking">版權所有 © 2024 JUNIE TUNG 網頁</p>
-        </div>
-    </footer>
-
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script> </body>
+    <div class="container">
+        <h1>歡迎來到我的學習成果網站</h1>
+        <p>這是一個簡單的單欄式佈局示例，使用了 HTML5 和 CSS。這個佈局非常適合於內容為主的網站，例如部落格、文章頁面等等。</p>
+        <p>這種佈局在各種設備上都能夠良好地顯示，提供了良好的用戶體驗。</p>
+        <p>單欄式佈局的優點是簡單明瞭，使用者能夠快速地找到需要的內容。這種佈局也易於維護和修改，對於開發者來說非常友好。</p>
+        <p>在這個示例中，使用了柔和的顏色，例如 淺藍色 作為背景，白色 作為內容區域的背景。</p>
+        <p>這些顏色能夠提供舒適的視覺體驗，不會讓使用者感到疲勞。</p>
+        <p>還使用了 陰影效果，使得內容區域看起來更有立體感。這些細節能夠提升網站的整體設計感，給使用者留下深刻的印象。</p>
+        <details>
+            <summary>請點擊展開...</summary>
+            <a href="menu.html">由此進入</a>
+          </details>            
+    </div>
+    
+    
+    
+    <div class="footer">
+        <p>&copy; 2025 Junie Tung 網站</p>
+    </div>
+</body>
 </html>
