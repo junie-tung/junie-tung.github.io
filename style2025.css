@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #3498db;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --spacing: 16px;
+    --border-radius: 8px;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "sidebar content content"
+      "footer footer footer";
+    grid-template-columns: 200px 1fr 1fr;
+    grid-gap: var(--spacing);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing);
+  }
+  
+  .header {
+    grid-area: header;
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+  }
+  
+  .header nav a {
+    color: white;
+    margin-left: var(--spacing);
+    text-decoration: none;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #e0e0e0;
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .content {
+    grid-area: content;
+  }
+  
+  .article {
+    background-color: white;
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing);
+  }
+  
+  .article-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing);
+  }
+  
+  .featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--spacing);
+  }
+  
+  .featured-item {
+    background-color: white;
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+  }
+  
+  .featured-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing);
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: #ccc;
+    text-align: center;
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+  }
+  
+  /*響應式設計*/
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-areas:
+        "header"
+        "content"
+        "sidebar"
+        "footer";
+      grid-template-columns: 1fr;
+    }
+  }
